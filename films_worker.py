@@ -27,9 +27,7 @@ class Film:
         }
 
         response = requests.get(url_rapid, headers=headers, params=querystring)
-
         film_id = response.json()['d'][0]['id']
-
         return film_id
 
     def genre_movie(self):
